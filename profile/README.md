@@ -52,3 +52,4 @@ flowchart LR
 ## Live Apps
 
 [**nocccd.streamlit.app**](https://nocccd.streamlit.app) — Data validation and reporting dashboards
+[**flexit.nocccd.edu**](https://flexit.nocccd.edu) — FlexIt Docker dbt scheduler
