@@ -48,8 +48,3 @@ flowchart LR
 - **Analysis**: Python, Pandas, SQL
 - **Scheduling**: FlexIt Docker — daily production dbt refresh orchestration
 - **Source System**: Ellucian Banner (Student Information System)
-
-## Live Apps
-
-- [**nocccd.streamlit.app**](https://nocccd.streamlit.app) — Data validation and reporting dashboards
-- [**flexit.nocccd.edu**](https://flexit.nocccd.edu) — FlexIt Docker dbt scheduler
