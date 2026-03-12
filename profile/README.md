@@ -25,11 +25,13 @@ flowchart LR
     end
 
     Banner --> dbt
+    dbt -.-> SQL
     FlexIt["FlexIt Docker Scheduler"] --> dbt
 
     DWHDB -- "DWH schema mat. views" --> SCFF["SCFF Analysis"]
 
-    Tableau["Tableau Cloud"] --> Streamlit["Streamlit Dashboards"]
+    DWHDB -- "DWH schema views/queries" --> Tableau["Tableau Cloud"]
+    Tableau --> Streamlit["Streamlit Dashboards"]
 
     style Banner fill:#F80000,color:#fff
     style DWHDB fill:#F80000,color:#fff
