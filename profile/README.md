@@ -16,20 +16,20 @@ Data infrastructure and analytics for **North Orange County Community College Di
 
 ```mermaid
 flowchart LR
-    Banner[(Banner\nSIS)] --> DWHDB[(Oracle\nDWHDB)]
-    Banner --> SQL["Ad-hoc\nSQL Queries"]
+    Banner[(Banner SIS)] --> DWHDB[(Oracle DWHDB)]
+    Banner --> SQL["Ad-hoc SQL Queries"]
     DWHDB --> SQL
 
     subgraph EDW["Enterprise Data Warehouse"]
-        dbt["dbt\nEDW_PROD schema"]
+        dbt["dbt - EDW_PROD schema"]
     end
 
     Banner --> dbt
-    FlexIt["FlexIt Docker\nScheduler"] --> dbt
+    FlexIt["FlexIt Docker Scheduler"] --> dbt
 
-    DWHDB -- "DWH schema\nmat. views" --> SCFF["SCFF\nAnalysis"]
+    DWHDB -- "DWH schema mat. views" --> SCFF["SCFF Analysis"]
 
-    Tableau["Tableau\nCloud"] --> Streamlit["Streamlit\nDashboards"]
+    Tableau["Tableau Cloud"] --> Streamlit["Streamlit Dashboards"]
 
     style Banner fill:#F80000,color:#fff
     style DWHDB fill:#F80000,color:#fff
@@ -41,11 +41,11 @@ flowchart LR
 
 ## Tech Stack
 
-**Data Warehouse**: dbt + Oracle — source staging, transformations, dimensional models (dims & facts)
-**Dashboards**: Streamlit with Oracle and Tableau Cloud connectors
-**Analysis**: Python, Pandas, SQL
-**Scheduling**: FlexIt Docker — daily production dbt refresh orchestration
-**Source System**: Ellucian Banner (Student Information System)
+- **Data Warehouse**: dbt + Oracle — source staging, transformations, dimensional models (dims & facts)
+- **Dashboards**: Streamlit with Oracle and Tableau Cloud connectors
+- **Analysis**: Python, Pandas, SQL
+- **Scheduling**: FlexIt Docker — daily production dbt refresh orchestration
+- **Source System**: Ellucian Banner (Student Information System)
 
 ## Live Apps
 
